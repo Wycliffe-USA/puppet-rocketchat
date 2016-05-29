@@ -1,0 +1,30 @@
+# rocketchat - Rocket.Chat job file
+
+description "The ultimate open source web chat platform"
+author "Bren Briggs <briggs.brenton@gmail.com>"
+
+# Stanzas
+#
+# Stanzas control when and how a process is started and stopped
+# See a list of stanzas here: http://upstart.ubuntu.com/wiki/Stanzas#respawn
+
+# When to start the service
+start on runlevel [2345]
+
+# When to stop the service
+stop on runlevel [016]
+
+# Automatically restart process if crashed
+respawn
+
+# Essentially lets upstart know the process will detach itself to the background
+expect fork
+
+# Run before process
+pre-start script
+    [ -d /var/run/myservice ] || mkdir -p /var/run/myservice
+    echo "Starting Rocketchat..."
+end script
+
+# Start the process
+exec npm /opt/rocketchat/bin #or something

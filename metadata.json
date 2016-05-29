@@ -1,0 +1,45 @@
+{
+  "name": "bbriggs-rocketchat",
+  "version": "0.1.0",
+  "author": "bbriggs",
+  "summary": "Build Rocket.Chat server with Puppet",
+  "license": "Apache-2.0",
+  "source": "https://github.com/bbriggs/puppet-rocketchat",
+  "project_page": "https://github.com/bbriggs/puppet-rocketchat",
+  "issues_url": "https://github.com/bbriggs/puppet-rocketchat/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    },
+    {
+      "name":"puppetlabs-mongodb",
+      "version_requirement": ">= 0.12.0"
+    },
+    {
+      "name":"puppet-nodejs",
+      "version_requirement": ">= 1.3.0"
+    },
+    {
+      "name":"maestrodev-wget",
+      "version_requirements": ">= 1.7.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ]
+}
